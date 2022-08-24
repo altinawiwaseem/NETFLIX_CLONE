@@ -1,0 +1,46 @@
+.row {
+  margin-left: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+h2 {
+  color: white;
+  font-weight: bold;
+}
+
+.row-posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+.arrow {
+  font-size: 40px;
+  position: absolute;
+  background-color: white;
+  opacity: 0.6;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 100%;
+  visibility: hidden;
+}
+.arrow-right {
+  right: 0;
+}
+.arrow-left {
+  left: 0;
+}
+.arrow:hover {
+  opacity: 1;
+}
+
+.row:hover .arrow {
+  visibility: visible;
+}

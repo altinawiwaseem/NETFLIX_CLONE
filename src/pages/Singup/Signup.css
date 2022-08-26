@@ -1,0 +1,94 @@
+.signup {
+  width: 100%;
+  height: 100vh;
+}
+
+.signup-img {
+  width: 100%;
+  height: 99vh;
+  object-fit: cover;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.form-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 100px 4px;
+  z-index: 50;
+}
+.form-overlay {
+  max-width: 450px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  margin: auto;
+}
+.overlay-inner-box {
+  max-width: 320px;
+  margin: auto;
+  padding: 4rem 0px;
+}
+.overlay-inner-box h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: bold;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0px;
+}
+form input {
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  background-color: rgb(55 65 81);
+  border-radius: 0.25rem;
+  color: white;
+  font-weight: bold;
+}
+form button {
+  background-color: #e50914;
+  padding: 0.75rem 0px;
+  margin: 1.5rem 0px;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+}
+form button:active {
+  transform: scale(0.99);
+}
+.sub {
+  padding: 1rem 0;
+}
+.sub span {
+  color: rgb(100 116 139);
+}
+.sub a {
+  text-decoration: none;
+}
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(100 116 139);
+  font-size: 14px;
+}
+.checkbox input {
+  margin: 0.5rem;
+}
+
+@media only screen and (max-width: 400px) {
+  .signup-img {
+    visibility: hidden;
+  }
+}

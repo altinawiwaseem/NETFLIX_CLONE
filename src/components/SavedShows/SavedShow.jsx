@@ -3,11 +3,14 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { UserAuth } from "../../context/AuthContext";
 import { db } from "../../firebase";
 import { updateDoc, doc, onSnapshot } from "firebase/firestore";
+import { AiOutlineClose } from "react-icons/ai";
+
+import "./SavedShows.css";
 
 const baseUrl = "https://image.tmdb.org/t/p/original/";
 function SavedShows() {
   const [movies, setMovies] = useState([]);
-  const { user } = UserAuth;
+  const { user } = UserAuth();
 
   const slideLeft = () => {
     const slider = document.getElementById("slider");
@@ -23,6 +26,17 @@ function SavedShows() {
       setMovies(doc.data()?.savedShows);
     });
   }, [user?.email]);
+  const movieRef = doc(db, "users", `${user?.email}`);
+  const deleteShow = async (passedID) => {
+    try {
+      const result = movies.filter((item) => item.id !== passedID);
+      await updateDoc(movieRef, {
+        savedShows: result,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div>
@@ -34,17 +48,17 @@ function SavedShows() {
             movies.map((movie) => (
               <div key={movie.id} className="movie-container">
                 <img
-                  className={`row-poster }`}
+                  className={`row-poster`}
                   src={` ${baseUrl}${movie?.img}`}
                   alt={movie.name}
                 />
 
                 <div className="show-info">
                   {" "}
-                  <span>
-                    {movie?.title || movie?.name || movie?.original_name}
-                  </span>{" "}
-                  Rate: {movie.vote_average.toFixed(1)}{" "}
+                  <span>{movie?.title}</span> Rate: {movie.rate.toFixed(1)}{" "}
+                  <p className="cancel-icon">
+                    <AiOutlineClose onClick={() => deleteShow(movie.id)} />
+                  </p>
                 </div>
               </div>
             ))}

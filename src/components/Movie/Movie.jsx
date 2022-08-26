@@ -18,8 +18,9 @@ function Movie({ movie, isLargeRow }) {
       await updateDoc(movieID, {
         savedShows: arrayUnion({
           id: movie.id,
-          title: movie.title,
-          img: movie.backdrop_path,
+          title: movie?.title || movie?.name || movie?.original_name,
+          img: movie?.poster_path,
+          rate: movie?.vote_average,
         }),
       });
     } else {
@@ -42,7 +43,7 @@ function Movie({ movie, isLargeRow }) {
           {movie?.title || movie?.name || movie?.original_name}
         </span> Rate: {movie.vote_average.toFixed(1)}{" "}
         <span onClick={saveShow}>
-          {like ? (
+          {like && saved ? (
             <FaHeart className="like" />
           ) : (
             <FaRegHeart className="like" />

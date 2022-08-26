@@ -12,7 +12,7 @@ function Account() {
           alt=""
         />
         <div className="overlay"></div>
-        <div className="j">
+        <div className="h1-container">
           <h1>My Shows</h1>
         </div>
       </div>

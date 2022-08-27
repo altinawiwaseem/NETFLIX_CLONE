@@ -4,7 +4,6 @@ import { UserAuth } from "../../context/AuthContext";
 import { db } from "../../firebase";
 import { updateDoc, doc, onSnapshot } from "firebase/firestore";
 import { AiOutlineClose } from "react-icons/ai";
-
 import "./SavedShows.css";
 
 const baseUrl = "https://image.tmdb.org/t/p/original/";
@@ -48,7 +47,7 @@ function SavedShows() {
             movies.map((movie) => (
               <div key={movie.id} className="movie-container">
                 <img
-                  className={`row-poster`}
+                  className={`saved-poster`}
                   src={` ${baseUrl}${movie?.img}`}
                   alt={movie.name}
                 />

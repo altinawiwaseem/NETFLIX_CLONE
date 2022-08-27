@@ -4,8 +4,6 @@ import "./Row.css";
 import Movie from "../Movie/Movie";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
-/* img base url */
-
 function Row({ title, fetchUrl, isLargeRow, id }) {
   const [movies, setMovies] = useState([]);
 

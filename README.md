@@ -14,10 +14,9 @@ Netflix clone project to mimic Netflix website
 
 ### about the project
 
-Clone Netflix react app
+A React clone Netflix app is a web application that mimics the functionality and design of Netflix. It is built using the React framework and utilizes a third-party API to fetch and display movie and TV show data. Users can browse a selection of movies and TV shows, and view detailed information about each selection. Additionally, users can create and manage a personal watchlist. The app also features responsive design.
 
-- Using react
-- Api
+---
 
 #### Developed with
 

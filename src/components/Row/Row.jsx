@@ -37,6 +37,7 @@ function Row({ title, fetchUrl, isLargeRow, id }) {
             <Movie key={movie.id} movie={movie} isLargeRow={isLargeRow} />
           ))}
         </div>
+
         <MdChevronRight onClick={slideRight} className="arrow arrow-right" />
       </div>
     </>

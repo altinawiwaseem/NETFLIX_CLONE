@@ -1,7 +1,8 @@
 # Netflix clone
 
-**NETFLIX clone React-App project**  
-_for practicing purpose_
+**NETFLIX clone React-App project**
+
+Netflix clone project to mimic Netflix website
 
 [Test it by yourself](https://netflix-clone-react-proj-91d29.web.app/)
 
@@ -15,7 +16,8 @@ _for practicing purpose_
 
 Clone Netflix react app
 
-- using react
+- Using react
+- Api
 
 #### Developed with
 
@@ -32,9 +34,10 @@ Clone Netflix react app
 
 ### Contact
 
-Email: <wasemm@live.com>
-GitHub: [Altinawi Waseem](https://github.com/altinawiwaseem)
-Linkedin: [Altinawi Waseem](www.linkedin.com/in/waseem-altinawi)
+Email: <wasemm@live.com> <br>
+GitHub: [Github page](https://github.com/altinawiwaseem)<br>
+Linkedin: [Linkedin page](www.linkedin.com/in/waseem-altinawi)<br>
+Portfolio: [Portfolio Website](https://altinawiwaseem.vercel.app/)
 
 ---
 
